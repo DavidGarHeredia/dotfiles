@@ -23,6 +23,8 @@ Plugin 'morhetz/gruvbox'
 " C++ syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+" YouCompleteMe
+"Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -97,6 +99,9 @@ set encoding=utf-8
 
 " Visual autocomplete
 set wildmenu
+
+" Autoindent
+set autoindent
 
 " Searching
 set incsearch
