@@ -31,6 +31,12 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " Julia editor plugin
 Plugin 'JuliaEditorSupport/julia-vim'
 
+" match-up plugin
+Plugin 'andymass/vim-matchup'
+
+" vim-slime
+Plugin 'jpalardy/vim-slime'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -65,7 +71,11 @@ let g:gruvbox_contrast_dark = "soft"
 colorscheme gruvbox
 
 "syntax julia
-let g:default_julia_version = "1.0"
+"let g:default_julia_version = "1.0"
+
+" using tmux in vim-slim
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
 
 
 "================================= 
