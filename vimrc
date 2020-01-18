@@ -1,3 +1,5 @@
+" for symbolic link ln -s ~/git/dotfiles/.vim ~/.vim
+
 set nocompatible
 filetype off
 
