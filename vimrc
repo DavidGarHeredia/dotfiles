@@ -26,6 +26,9 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " YouCompleteMe
 "Plugin 'Valloric/YouCompleteMe'
 
+" Julia editor plugin
+Plugin 'JuliaEditorSupport/julia-vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -50,13 +53,17 @@ let g:cpp_class_scope_highlight = 1
 
 "color scheme
 "let g:dracula_colorterm = 0 " for transparent background in dracula
-colorscheme dracula
+"colorscheme dracula
 
 "colorscheme monokai
 
 "let g:gruvbox_italic=1
-"set background=dark    " Setting dark mode
-"colorscheme gruvbox
+set background=dark    " Setting dark mode
+let g:gruvbox_contrast_dark = "soft"
+colorscheme gruvbox
+
+"syntax julia
+let g:default_julia_version = "1.0"
 
 
 "================================= 
