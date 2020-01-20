@@ -75,7 +75,9 @@ colorscheme gruvbox
 
 " using tmux in vim-slim
 let g:slime_target = "tmux"
-let g:slime_paste_file = "$HOME/.slime_paste"
+let g:slime_paste_file = "$HOME/.slime_paste" " requiered
+" to just press enter when vim-slim ask for the path of execution
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.1"}
 
 
 "================================= 
