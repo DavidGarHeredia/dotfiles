@@ -26,7 +26,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " YouCompleteMe
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " Julia editor plugin
 Plugin 'JuliaEditorSupport/julia-vim'
@@ -37,20 +37,26 @@ Plugin 'andymass/vim-matchup'
 " vim-slime
 Plugin 'jpalardy/vim-slime'
 
+" nerd tree
+Plugin 'preservim/nerdtree'
+
+" syntastic
+" Plugin 'vim-syntastic/syntastic'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 
 "================================= 
 "" SYNTAX AND COLOR SCHEME
-"================================ 
+"=================================
 
 " Turn on syntax highlighting.
 syntax on
 
 " palette of colors 
-set termguicolors
-"set t_Co=256
+"set termguicolors
+set t_Co=256
 
 "syntax cpp
 let g:cpp_member_variable_highlight = 1
@@ -73,11 +79,34 @@ colorscheme gruvbox
 "syntax julia
 "let g:default_julia_version = "1.0"
 
+
+
+"================================= 
+"" Plugins Configuration
+"=================================
+
+" short-cut for the nerd tree
+map <C-n> :NERDTreeToggle<CR>
+
+
 " using tmux in vim-slim
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste" " requiered
 " to just press enter when vim-slim ask for the path of execution
 let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.1"}
+
+
+" syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+
 
 
 "================================= 

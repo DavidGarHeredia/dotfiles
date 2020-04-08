@@ -1,0 +1,35 @@
+# First, some code to install files from source because
+# using the doc of google it does not work
+# cmake -DBUILD_DEPS:BOOL=ON -H. -Bbuild -G "Unix Makefiles"
+# cmake --build build
+# cmake --build build --target test
+# cmake --build build --target install # igual necesitas permisos de administrador
+
+
+# CMAKE to compile Google OR-tools in c++
+
+cmake_minimum_required(VERSION 3.10)
+
+# WHERE TO LOCATE THE OUTPUT (i.e.: executable file)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../)
+
+# PROJECT NAME
+project(prueba1)
+
+# CFLAGS
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3  ${OpenMP_CXX_FLAGS}")
+
+# FINDING Google OR-tools
+list(APPEND CMAKE_PREFIX_PATH "/home/david/or-tools/build/dependencies/install/")
+set(GFLAGS_USE_TARGET_NAMESPACE TRUE)
+find_package(ortools CONFIG REQUIRED)
+
+# CREATING THE EXECUTABLE
+add_executable(executable
+  program.cpp
+)
+
+# LINKING LIBRARIES
+target_link_libraries(executable ortools::ortools)
