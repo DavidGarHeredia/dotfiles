@@ -26,7 +26,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Julia editor plugin
 Plugin 'JuliaEditorSupport/julia-vim'
