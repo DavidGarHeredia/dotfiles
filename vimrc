@@ -43,6 +43,10 @@ Plugin 'preservim/nerdtree'
 " syntastic
 " Plugin 'vim-syntastic/syntastic'
 
+" Python syntax 
+Plugin 'vim-python/python-syntax'
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -77,7 +81,7 @@ let g:gruvbox_contrast_dark = "soft"
 colorscheme gruvbox
 
 "syntax julia
-"let g:default_julia_version = "1.0"
+let g:default_julia_version = "1.5"
 
 
 
@@ -138,8 +142,8 @@ set cursorline " highlight current line
 set showmatch " to highlight the match of parenthesis.
 
 " Show line numbers
-set number
-set relativenumber
+" set number
+" set relativenumber
 
 " Set status line display
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
