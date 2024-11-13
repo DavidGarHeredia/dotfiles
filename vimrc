@@ -50,6 +50,8 @@ Plugin 'vim-python/python-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" for delete to work in mac
+set backspace=indent,eol,start
 
 "================================= 
 "" SYNTAX AND COLOR SCHEME
@@ -142,8 +144,8 @@ set cursorline " highlight current line
 set showmatch " to highlight the match of parenthesis.
 
 " Show line numbers
-" set number
-" set relativenumber
+set number
+set relativenumber
 
 " Set status line display
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
