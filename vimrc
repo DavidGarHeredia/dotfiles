@@ -134,8 +134,6 @@ set noshiftround
 " Speed up scrolling in Vim
 set ttyfast
 
-" Status bar
-set laststatus=2
 
 " Display options
 set showmode
@@ -148,6 +146,7 @@ set number
 set relativenumber
 
 " Set status line display
+set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
 
 " Encoding
